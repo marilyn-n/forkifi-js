@@ -7,6 +7,23 @@ export const clearResults = () => {
   document.querySelector('.results__list').innerHTML = '';
 }
 
+export const renderLoader = parent => {
+  const loader = `
+  <div class="loader">
+    <svg>
+      <use href="img/icons.svg#loader"><use>
+    <svg>
+  <div/>
+  `
+  parent.insertAdjacentHTML('afterbegin', loader);
+}
+
+export const clearLoader = () => {
+  const loader = document.querySelector('.loader');
+  if (loader) loader.parentElement.removeChild(loader);
+
+}
+
 const renderRecipe = recipe => {
   const recipeResultsList = document.querySelector('.results__list');
   const markup = 

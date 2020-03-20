@@ -277,7 +277,11 @@ body {
     color: #F59A83;
     text-transform: uppercase;
     font-weight: 600;
-    margin-bottom: .3rem; }
+    margin-bottom: .3rem; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 20rem; }
   .results__author,
   .likes__author {
     font-size: 1.1rem;

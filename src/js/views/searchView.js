@@ -1,4 +1,11 @@
 export const getInput = () => document.querySelector('.search__field').value;
+export const clearInput = () => {
+  document.querySelector('.search__field').value = ''
+};
+
+export const clearResults = () => {
+  document.querySelector('.results__list').innerHTML = '';
+}
 
 const renderRecipe = recipe => {
   const recipeResultsList = document.querySelector('.results__list');
